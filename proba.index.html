@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+
+        }
+
+
+
+        .fot1 {
+            background: url(images/consoleta.jpg) no-repeat center center fixed;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+
+        }
+
+        /* @keyframes animatDjImage {
+            0% {
+                transform: scale(1);
+            }
+
+
+            100% {
+                transform: scale(1.08);
+            }
+        } */
+
+
+        .fot2.active {
+            background: url(images/crowd.jpg) no-repeat center center fixed;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            transition: 2s linear;
+        }
+
+        .klik {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            font-size: 40px;
+        }
+
+        /* .nav.active {
+            position: absolute;
+            top: -5%;
+            left: 20%;
+            width: 100%;
+            animation: animatNav 1s linear forwards;
+        }
+
+        @keyframes animatNav {
+            0% {}
+
+            100% {
+                top: 5%;
+            }
+        }
+
+
+        .nav ul {
+            display: flex;
+
+        }
+
+        .nav ul li {
+            list-style: none;
+
+        }
+
+
+        a {
+
+            font-size: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 40px;
+            padding: 10px;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            transition: 0.3s;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+
+
+
+        a:hover {
+            background-color: black;
+            color: white;
+
+        }
+
+        .footer p {
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+
+        .header h1 {
+            visibility: hidden;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            font-size: 80px;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Big Shoulders Display', cursive;
+            cursor: pointer;
+            animation: animatHeader linear 2s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes animatHeader {
+            0% {
+                visibility: initial;
+                z-index: -1;
+                transform: scale(0);
+            }
+
+            50% {
+                z-index: 1;
+                transform: scale(.5);
+            }
+
+            75% {
+                z-index: 1;
+                transform: scale(.7.5);
+            }
+
+            100% {
+                visibility: initial;
+                z-index: 1;
+                transform: scale(1);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <section class="box">
+
+        <div class="fot1"></div>
+
+        <div class="fot2"></div>
+        <div class="klik">
+            <a href="#">Klik</a>
+        </div>
+        </div>
+    </section>
+    <script>
+        document.querySelector('.klik').addEventListener("click", function () {
+            document.querySelector('.fot2').classList.add('active');
+            document.querySelector('.fot1').classList.remove('fot1');
+
+        })
+
+
+    </script>
+</body>
+
+</html>
